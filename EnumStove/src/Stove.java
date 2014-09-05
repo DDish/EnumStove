@@ -13,10 +13,10 @@ public class Stove {
 		System.out.println("Stove --------------");
 		for (int i = 0; i < NUM_BURNERS; i++) {
 			burners.get(i).display();
-			if (burners.get(i).getTemperature().equals("Hot")) tempHot = 1;
+			if (burners.get(i).getTemperature().equals("Hot")) tempHot++;
 			
 		}
-		if (tempHot == 1) System.out.println("HOT BURNER ALERT!");
+		if (tempHot > 0) System.out.println("HOT BURNER ALERT!");
 	}
 	
 	public void timePassing(int minutes) {
@@ -48,7 +48,6 @@ public class Stove {
 		stove.setBurners();
 		stove.timePassing(8);
 		stove.display();
-		System.out.println(stove.burners.get(3).getTemperature());
 	}
 
 }

@@ -48,8 +48,8 @@ public void updateTemperature() {
 	}
 }
 
-public Temperature getTemperature(){
-	return tmptr;
+public String getTemperature(){
+	return tmptr.temperature;
 }
 
 public void display() {
