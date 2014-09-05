@@ -48,5 +48,12 @@ public void updateTemperature() {
 	}
 }
 
+public Temperature getTemperature(){
+	return tmptr;
+}
+
+public void display() {
+	System.out.println(sting.toString());
+}
 
 }
