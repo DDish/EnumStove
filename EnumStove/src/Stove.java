@@ -20,6 +20,10 @@ public class Stove {
 	}
 	
 	public void timePassing(int minutes) {
+		for (int i = 0; i < NUM_BURNERS; i++){
+		for (int j = 0; j < minutes; j++) {
+			burners.get(i).updateTemperature();
+		}}
 	}
 	
 	public void setBurners() {
@@ -42,7 +46,9 @@ public class Stove {
 		Stove stove = new Stove();
 		stove.display();
 		stove.setBurners();
+		stove.timePassing(8);
 		stove.display();
+		System.out.println(stove.burners.get(3).getTemperature());
 	}
 
 }
