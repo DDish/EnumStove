@@ -13,8 +13,8 @@ public class Stove {
 		System.out.println("Stove --------------");
 		for (int i = 0; i < NUM_BURNERS; i++) {
 			burners.get(i).display();
-			if (burners.get(i).getTemperature().equals("Hot"));
-			tempHot = 1;
+			if (burners.get(i).getTemperature().equals("Hot")) tempHot = 1;
+			
 		}
 		if (tempHot == 1) System.out.println("HOT BURNER ALERT!");
 	}
@@ -40,6 +40,8 @@ public class Stove {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Stove stove = new Stove();
+		stove.display();
+		stove.setBurners();
 		stove.display();
 	}
 
